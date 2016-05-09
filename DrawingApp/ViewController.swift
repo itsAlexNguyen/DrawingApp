@@ -69,5 +69,14 @@ class ViewController: UIViewController {
         //When some releases their finger out of the screen
         buttonsStackView.hidden = false
     }
+    func eraseDrawing() {
+        self.drawingView.image = nil
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "drawingToSettingSegue" {
+            let settingVC = segue.destinationViewController as! SettingsVC
+            settingVC.drawingVC = self
+        }
+    }
 }
 

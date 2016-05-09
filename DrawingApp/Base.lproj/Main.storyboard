@@ -71,7 +71,7 @@
                                         </constraints>
                                         <state key="normal" image="settings"/>
                                         <connections>
-                                            <segue destination="bK7-Bc-HZP" kind="show" id="E9x-rN-pCl"/>
+                                            <segue destination="bK7-Bc-HZP" kind="show" identifier="drawingToSettingSegue" id="E9x-rN-pCl"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -109,12 +109,18 @@
                         <viewControllerLayoutGuide type="top" id="LL8-uX-iAe"/>
                         <viewControllerLayoutGuide type="bottom" id="Ete-fF-GeP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0Ed-m9-iSZ" customClass="Sett">
+                    <view key="view" contentMode="scaleToFill" id="0Ed-m9-iSZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="BNX-fA-ZkV"/>
+                    <navigationItem key="navigationItem" title="Settings" id="BNX-fA-ZkV">
+                        <barButtonItem key="rightBarButtonItem" title="Erase" id="i9d-ef-19H">
+                            <connections>
+                                <action selector="eraseTapped:" destination="bK7-Bc-HZP" id="Ptf-Kc-q7C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWN-nw-Vmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
