@@ -14,6 +14,9 @@ import UIKit
 class ViewController: UIViewController {
     
     var lastPoint = CGPoint.zero
+    var red : CGFloat = 0
+    var blue : CGFloat = 1
+    var green : CGFloat = 0
     
     @IBOutlet weak var buttonsStackView: UIStackView!
     @IBOutlet weak var drawingView: UIImageView!
@@ -54,6 +57,11 @@ class ViewController: UIViewController {
             CGContextMoveToPoint(context, self.lastPoint.x, self.lastPoint.y)
             //Draw line to the next point
             CGContextAddLineToPoint(context, point.x, point.y)
+            CGContextSetRGBStrokeColor(context, red, green, blue, 0.8)
+            //Set the shape of the line
+            CGContextSetLineCap(context, .Round)
+            //Set the size of the line
+            CGContextSetLineWidth(context, 20)
             //Stroke the path
             CGContextStrokePath(context)
             //Draw context onto image
@@ -77,6 +85,30 @@ class ViewController: UIViewController {
             let settingVC = segue.destinationViewController as! SettingsVC
             settingVC.drawingVC = self
         }
+    }
+    @IBAction func blueTapped(sender: AnyObject) {
+        red = 0
+        blue = 1
+        green = 0
+
+    }
+    @IBAction func greenTapped(sender: AnyObject) {
+        red = 0
+        blue = 0
+        green = 1
+    }
+    @IBAction func redTapped(sender: AnyObject) {
+        red = 1
+        blue = 0
+        green = 0
+    }
+    @IBAction func yellowTapped(sender: AnyObject) {
+        red = 249.0/255.0
+        blue = 23.0/255.0
+        green = 214.0/255.0
+    }
+    @IBAction func randomTapped(sender: AnyObject) {
+        
     }
 }
 
