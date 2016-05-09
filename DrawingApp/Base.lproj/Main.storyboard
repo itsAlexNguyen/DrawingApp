@@ -94,6 +94,7 @@
                     <navigationItem key="navigationItem" id="QNn-iq-M2X"/>
                     <connections>
                         <outlet property="buttonsStackView" destination="rFv-PN-5we" id="RaG-4M-hu1"/>
+                        <outlet property="drawingView" destination="vI2-BF-ALL" id="vfD-BG-ket"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
