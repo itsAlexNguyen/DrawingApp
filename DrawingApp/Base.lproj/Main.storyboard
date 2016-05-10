@@ -127,7 +127,28 @@
                     <view key="view" contentMode="scaleToFill" id="0Ed-m9-iSZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7f-ya-pFQ">
+                                <rect key="frame" x="212" y="100" width="176" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="L5K-aJ-WDL"/>
+                                    <constraint firstAttribute="width" constant="176" id="hna-R7-peu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Share Art">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sharedTapped:" destination="bK7-Bc-HZP" eventType="touchUpInside" id="kRC-ia-Loi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z7f-ya-pFQ" firstAttribute="top" secondItem="LL8-uX-iAe" secondAttribute="bottom" constant="36" id="5lN-FX-BVX"/>
+                            <constraint firstItem="z7f-ya-pFQ" firstAttribute="centerX" secondItem="0Ed-m9-iSZ" secondAttribute="centerX" id="KTF-eP-YdJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="BNX-fA-ZkV">
                         <barButtonItem key="rightBarButtonItem" title="Erase" id="i9d-ef-19H">
