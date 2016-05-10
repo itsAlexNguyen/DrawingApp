@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import pop
 
 class SettingsVC: UIViewController {
     weak var drawingVC : ViewController? = nil
