@@ -224,9 +224,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="BrushSizeTxtConstraint" destination="8rS-qz-ro0" id="43v-uq-4JZ"/>
+                        <outlet property="bottomConstraint" destination="pu5-ks-T9g" id="Scu-py-NNg"/>
                         <outlet property="brushSizeSlider" destination="3fK-hg-dzl" id="5iP-iu-fYN"/>
+                        <outlet property="brushSliderConstraint" destination="647-4U-FeF" id="Dio-V4-gXo"/>
                         <outlet property="demoImageView" destination="dHh-j0-BGf" id="Ats-IN-9V3"/>
+                        <outlet property="demoViewConstraint" destination="Eph-vG-rJk" id="g0J-hh-hkh"/>
                         <outlet property="opacitySlider" destination="CIf-eB-qgb" id="ADR-Yc-QeO"/>
+                        <outlet property="opacitySliderConstraint" destination="9HB-iD-iod" id="Abz-Nb-CRm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWN-nw-Vmt" userLabel="First Responder" sceneMemberID="firstResponder"/>

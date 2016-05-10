@@ -13,6 +13,7 @@
 		4606E29E1CE1139900C5782C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4606E29D1CE1139900C5782C /* Assets.xcassets */; };
 		4606E2A11CE1139900C5782C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4606E29F1CE1139900C5782C /* LaunchScreen.storyboard */; };
 		4606E2AE1CE118CB00C5782C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606E2AD1CE118CB00C5782C /* SettingsVC.swift */; };
+		4619E57C1CE17CBC0086F92D /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619E57B1CE17CBC0086F92D /* AnimationEngine.swift */; };
 		9E1D12B89EB1D31F2D83BEB5 /* Pods_DrawingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5557A5FD42184B91C2BC5A23 /* Pods_DrawingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		4606E2A21CE1139900C5782C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4606E2AD1CE118CB00C5782C /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		4619E5781CE17C350086F92D /* DrawingApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawingApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		4619E57B1CE17CBC0086F92D /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
 		5557A5FD42184B91C2BC5A23 /* Pods_DrawingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEA7F530AA0C55D9205F396 /* Pods-DrawingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawingApp/Pods-DrawingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 		4606E2AB1CE113AC00C5782C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4619E57B1CE17CBC0086F92D /* AnimationEngine.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				4606E2991CE1139900C5782C /* ViewController.swift in Sources */,
 				4606E2971CE1139900C5782C /* AppDelegate.swift in Sources */,
+				4619E57C1CE17CBC0086F92D /* AnimationEngine.swift in Sources */,
 				4606E2AE1CE118CB00C5782C /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

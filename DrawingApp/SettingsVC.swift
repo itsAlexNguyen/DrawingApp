@@ -13,16 +13,28 @@ class SettingsVC: UIViewController {
     weak var drawingVC : ViewController? = nil
     @IBOutlet weak var brushSizeSlider: UISlider!
     @IBOutlet weak var opacitySlider: UISlider!
+    @IBOutlet weak var BrushSizeTxtConstraint: NSLayoutConstraint!
     @IBOutlet weak var demoImageView: UIImageView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var demoViewConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var brushSliderConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var opacitySliderConstraint: NSLayoutConstraint!
+    
+    var animationEngine: AnimationEngine!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
+        self.animationEngine = AnimationEngine(constraints: [bottomConstraint, demoViewConstraint, brushSliderConstraint, opacitySliderConstraint, BrushSizeTxtConstraint])
     }
     override func viewWillAppear(animated: Bool) {
         brushSizeSlider.value = Float((drawingVC?.brushSize)!)
         opacitySlider.value = Float((drawingVC?.opacity)!)
         adjustDemoView()
+    }
+    override func viewDidAppear(animated: Bool) {
+        self.animationEngine.animateOnScreen(0)
     }
     @IBAction func eraseTapped(sender: AnyObject) {
         drawingVC?.eraseDrawing()
