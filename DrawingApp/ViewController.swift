@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     var red : CGFloat = 0 //Default value
     var blue : CGFloat = 1 //Default value (of blue)
     var green : CGFloat = 0 //Default value
+    var brushSize: CGFloat = 20.0 //Default brush size
+    var opacity: CGFloat = 0.8 //Default opacity
     
     @IBOutlet weak var buttonsStackView: UIStackView!
     @IBOutlet weak var drawingView: UIImageView!
@@ -65,6 +67,13 @@ class ViewController: UIViewController {
         //When some releases their finger out of the screen
         buttonsStackView.hidden = false
     }
+    
+    func changeBrushSizeTo(brushSize: CGFloat) {
+        self.brushSize = brushSize
+    }
+    func changeOpacityTo(opacity: CGFloat) {
+        self.opacity = opacity
+    }
     func eraseDrawing() {
         self.drawingView.image = nil
     }
@@ -79,11 +88,11 @@ class ViewController: UIViewController {
         CGContextMoveToPoint(context, firstPoint.x, firstPoint.y)
         //Draw line to the next point
         CGContextAddLineToPoint(context, secondPoint.x, secondPoint.y)
-        CGContextSetRGBStrokeColor(context, red, green, blue, 0.8)
+        CGContextSetRGBStrokeColor(context, red, green, blue, opacity)
         //Set the shape of the line
         CGContextSetLineCap(context, .Round)
         //Set the size of the line
-        CGContextSetLineWidth(context, 20)
+        CGContextSetLineWidth(context, brushSize)
         //Stroke the path
         CGContextStrokePath(context)
         //Draw context onto image
